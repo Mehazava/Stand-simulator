@@ -70,7 +70,20 @@ begin
   Price := SCounter * 100;
   Owner := 'NULL';
   GoT := -1;
-  Form1.StandName.Caption := 'asd';
+  if (SCounter = 4) then begin
+    GoT := 2;
+    SetLength(Goods, 3);
+    Goods[0].Name:= 'potato'; 
+    Goods[0].Number:= 3;
+    Goods[0].Value:= 20;
+    Goods[1].Name:= 'leek';
+    Goods[1].Number:= 5;
+    Goods[1].Value:= 90;
+    Goods[2].Name:= 'carrot';
+    Goods[2].Number:= 12;
+    Goods[2].Value:= 40;
+
+  end;
 end;
 
 procedure Choose(N: Integer);
@@ -84,7 +97,8 @@ begin
     Form1.BuyStandButton.Caption := 'Продать киосок'
   else Form1.BuyStandButton.Caption := 'Купить киосок';
   for i := 0 to StandArr[N].GoT do begin
-
+    Form1.GoodsList.Items.Add(IntToStr(StandArr[N].Goods[i].Number) + ' ' +
+      StandArr[N].Goods[i].Name + ' for ' + IntToStr(StandArr[N].Goods[i].Value));
   end;
 end;
 
@@ -96,7 +110,10 @@ begin
   for i := 0 to STALLNUM do begin
     //if ((X > StandPos[i, 0]) and (X < StandPos[i, 0] + StandSizeX) and
     //  (Y > StandPos[i, 1]) and (Y < StandPos[i, 1] + StandSizeY))
-    //then Choose(i);
+    //then begin
+    //  Choose(i);
+    //  break;
+    //end;
   end;
   Choose(3);//
 end;
@@ -106,6 +123,9 @@ var
   i: Integer;
 begin
   SCounter := 0;
+  for i := 0 to STALLNUM do begin
+    StandArr[i] := TStand.Create;
+  end;
 end;
 
 
