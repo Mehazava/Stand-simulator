@@ -26,10 +26,6 @@
         <LoadedDesigner Value="True"/>
       </Unit1>
     </Units>
-    <JumpHistory Count="1">
-      <Position1>
-        <Filename Value="unit1.pas"/>
-      </Position1>
-    </JumpHistory>
+    <JumpHistory HistoryIndex="-1"/>
   </ProjectSession>
 </CONFIG>

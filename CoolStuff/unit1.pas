@@ -14,8 +14,11 @@ type
 
   TForm1 = class(TForm)
     BuyStandButton: TButton;
+    ChooseGoods: TComboBox;
+    NumGoods: TEdit;
     Funds: TLabel;
     Label5: TLabel;
+    ResultPrice: TLabel;
     OrderGoodsButton: TButton;
     AccountCB: TComboBox;
     Label1: TLabel;
@@ -40,7 +43,6 @@ type
     Owner, Name: String;
     Price, GoT: Int64;
     Goods: array of TGoods;
-
   end;
 
 var

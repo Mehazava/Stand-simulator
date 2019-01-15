@@ -1,19 +1,132 @@
 object Form1: TForm1
-  Left = 414
-  Height = 596
-  Top = 164
-  Width = 726
-  Caption = 'Form1'
-  ClientHeight = 596
-  ClientWidth = 726
+  Left = 405
+  Height = 540
+  Top = 146
+  Width = 977
+  Caption = 'Симулятор киосочника (pre-alpha 0.0.2)'
+  ClientHeight = 540
+  ClientWidth = 977
   LCLVersion = '1.8.4.0'
-  object Button1: TButton
-    Left = 38
-    Height = 46
-    Top = 40
-    Width = 73
-    Caption = 'Button1'
+  object BuyStandButton: TButton
+    Left = 728
+    Height = 40
+    Top = 32
+    Width = 241
+    Caption = 'Купить киосок//продать'
     TabOrder = 0
-    Visible = False
+  end
+  object Panel1: TPanel
+    Left = 8
+    Height = 467
+    Top = 7
+    Width = 712
+    TabOrder = 1
+  end
+  object AccountCB: TComboBox
+    Left = 8
+    Height = 23
+    Top = 512
+    Width = 186
+    ItemHeight = 15
+    TabOrder = 2
+    Text = 'AccountCB'
+  end
+  object GoodsList: TListBox
+    Left = 728
+    Height = 375
+    Top = 97
+    Width = 241
+    ItemHeight = 0
+    TabOrder = 3
+  end
+  object Label1: TLabel
+    Left = 729
+    Height = 15
+    Top = 80
+    Width = 45
+    Caption = 'Товары:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 15
+    Top = 488
+    Width = 47
+    Caption = 'Аккаунт:'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 729
+    Height = 15
+    Top = 7
+    Width = 85
+    Caption = '//Имя киоска//'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 880
+    Height = 15
+    Top = 7
+    Width = 89
+    Caption = '//Цена киоска//'
+    ParentColor = False
+  end
+  object OrderGoodsButton: TButton
+    Left = 857
+    Height = 25
+    Top = 512
+    Width = 112
+    Caption = 'Заказать товары'
+    TabOrder = 4
+  end
+  object Funds: TLabel
+    Left = 272
+    Height = 15
+    Top = 520
+    Width = 6
+    Caption = '0'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 208
+    Height = 15
+    Top = 520
+    Width = 53
+    Caption = 'Средства:'
+    ParentColor = False
+  end
+  object ChooseGoods: TComboBox
+    Left = 729
+    Height = 23
+    Hint = 'Тип товара'
+    Top = 480
+    Width = 121
+    ItemHeight = 15
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 5
+    Text = 'ChooseGoods'
+  end
+  object NumGoods: TEdit
+    Left = 857
+    Height = 23
+    Hint = 'Количество товара'
+    Top = 480
+    Width = 112
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 6
+    Text = 'NumGoods'
+  end
+  object ResultPrice: TLabel
+    Left = 729
+    Height = 15
+    Hint = 'Результатирующая цена'
+    Top = 522
+    Width = 15
+    Caption = '---'
+    ParentColor = False
+    ParentShowHint = False
+    ShowHint = True
   end
 end

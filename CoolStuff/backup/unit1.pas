@@ -13,10 +13,19 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
-    Button1: TButton;
-    ComboBox1: TComboBox;
+    BuyStandButton: TButton;
+    ChooseGoods: TComboBox;
+    NumGoods: TEdit;
+    Funds: TLabel;
+    Label5: TLabel;
+    ResultPrice: TLabel;
+    OrderGoodsButton: TButton;
+    AccountCB: TComboBox;
     Label1: TLabel;
-    ListBox1: TListBox;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    GoodsList: TListBox;
     Panel1: TPanel;
   private
 
@@ -32,12 +41,13 @@ type
   TStand = class
   public
     Owner, Name: String;
-    Price: Int64;
+    Price, GoT: Int64;
     Goods: array of TGoods;
   end;
 
 var
   Form1: TForm1;
+  StandArr: array[0..69] of TStand;
 
 implementation
 
