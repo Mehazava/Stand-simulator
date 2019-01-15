@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 405
+  Left = 398
   Height = 540
-  Top = 146
+  Top = 130
   Width = 977
   Caption = 'Симулятор киосочника (pre-alpha 0.0.2)'
   ClientHeight = 540
@@ -21,6 +21,8 @@ object Form1: TForm1
     Top = 7
     Width = 712
     TabOrder = 1
+    OnClick = Panel1Click
+    OnMouseDown = Panel1MouseDown
   end
   object AccountCB: TComboBox
     Left = 8

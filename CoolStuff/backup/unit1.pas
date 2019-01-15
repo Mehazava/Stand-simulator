@@ -1,6 +1,8 @@
 unit Unit1;
 
 {$mode objfpc}{$H+}
+{$MACRO ON}
+{$DEFINE STALLNUM:=19}
 
 interface
 
@@ -27,6 +29,8 @@ type
     Label4: TLabel;
     GoodsList: TListBox;
     Panel1: TPanel;
+    procedure Panel1MouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
   private
 
   public
@@ -47,11 +51,26 @@ type
 
 var
   Form1: TForm1;
-  StandArr: array[0..69] of TStand;
+  StandArr: array[0..STALLNUM] of TStand;
+  StandPos: array[0..STALLNUM, 0..1] of Integer;
+  StandSizeX, StandSizeY: Integer;
 
 implementation
 
 {$R *.lfm}
+
+{ TForm1 }
+
+procedure TForm1.Panel1MouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+var
+  i, x, y: Integer;
+begin
+  for i := 0 to STALLNUM do begin
+
+  end;
+  Form1.Funds.Caption := IntToStr(X);
+end;
 
 end.
 
